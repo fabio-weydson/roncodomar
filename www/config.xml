@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.easyresto.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Easy Resto</name>
+<widget id="com.roncodomar.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Ronco do Mar</name>
   <description>
-        Easy Resto - Um jeito fácil de pedir
+       Evento Ronco do Mar
     </description>
   <author email="fabioweydson@gmail.com" href="">
         Fabio Weydson
