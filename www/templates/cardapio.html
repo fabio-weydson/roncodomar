@@ -1,0 +1,20 @@
+<ion-view view-title="CARDÁPIO"  class="ionview-with-patbg"  id="cardapio">
+  <ion-content has-header="true" has-bouncing="false" >
+  <div class="list" id="card1" ng-if="visivel==1">
+      <div class="list-item">
+        <img src="img/menuA_1.jpg" style="    display: list-item;"><img src="img/menuA_2.jpg">
+      </div>
+  </div>
+  <div class="list" id="card2" ng-if="visivel==2"> 
+      <div class="list-item">
+          <img src="img/menuB_1.jpg" style="    display: list-item;"><img src="img/menuB_2.jpg">
+      </div>
+  </div>
+
+</ion-content>
+<div class="button-bar">
+    <a class="button button-large" ng-click="exibe(1)">COMIDAS</a>
+    <a class="button button-large" ng-click="exibe(2)">BEBIDAS</a>
+  </div>
+</ion-view>
+

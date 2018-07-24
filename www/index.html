@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <title>Restaurant App</title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="lib/ionic-datepicker/dist/style.css" rel="stylesheet">
+    <link href="iconic/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/release/js/ionic.bundle.js"></script>
+    <script src="lib/angular-filter/dist/angular-filter.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-moment/angular-moment.js"></script>
+    <script src="lib/angular-cache/angular-cache.min.js"></script>
+    <script src="lib/ionic-datepicker/dist/templates.js"></script>
+
+    <script src="lib/ionic-datepicker/dist/ionic-datepicker.js"></script>
+    <script src="lib/angular-underscore.min.js"></script>
+
+    <script src="lib/geolib/dist/geolib.js"></script>
+    <script src="lib/conversion.js/conversion.js"></script>
+
+    <script src="lib/ionic-timepicker/dist/ionic-timepicker.bundle.min.js"></script>
+   
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+     <!-- <script src="cordova.js"></script>-->
+    
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!--script src="templates/templates.js"></script-->
+    <script src="js/config.js"></script>
+
+    <!-- services -->
+    <script src="js/services/distance.service.js"></script>
+    <script src="js/services/data.service.js"></script>
+
+    <!-- Directives -->
+
+    <script src="js/directives/browseTo.directive.js"></script>  
+    <script src="js/directives/standard-time-meridian.js"></script>
+    <script src="js/directives/cartbtn.directive.js"></script>
+    <script src="js/directives/likeBtn.directive.js"></script>
+    <script src="js/directives/misc.directive.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+
+    <!-- Controller -->
+    <script src="js/controllers.js"></script>
+    <script src="js/controllers/home.controller.js"></script>
+    <script src="js/controllers/about.controller.js"></script>
+    <script src="js/controllers/cardapio.controller.js"></script>
+    <script src="js/controllers/adduser.controller.js"></script>
+    <script src="js/controllers/walkthrough.controller.js"></script>
+    <!--script src="js/controllers/barcode.controller.js"></script-->
+    <script src="js/factory/cart.factory.js"></script>
+    <script src="js/factory/user.factory.js"></script>
+    <script src="js/factory/cache.factory.js"></script>
+    <!-- Filters -->
+    <script src="js/filters/dish.filter.js"></script>
+
+  </head>
+
+  <body ng-app="restaurant" class="platform-android platform-cordova platform-webview">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
