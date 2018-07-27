@@ -7,7 +7,6 @@ app
 	'$timeout',
 	'$ionicTabsDelegate',
 	'$cordovaAppRate',
-	'FCcart',
 	'dataservice',
 	'$rootScope',
 	'appConfig',
@@ -17,7 +16,6 @@ app
  	$timeout, 
  	$ionicTabsDelegate, 
  	$cordovaAppRate, 
- 	FCcart, 
  	dataservice, 
  	$rootScope, 
  	appConfig
@@ -32,9 +30,7 @@ app
 	}, false);
 
 	$scope.$on('$ionicView.beforeEnter',function(){
-		$scope.cats = FCcart.dishCats().then(function(d){
-			$scope.cats= d;
-		});
+	
 	});
 
 	$scope.filterCat = [];

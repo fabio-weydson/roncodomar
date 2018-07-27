@@ -5,9 +5,6 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
-      <ion-nav-buttons side="right">
-        <cartt-btn ng-if="getTotal"></cartt-btn>
-      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -28,23 +25,6 @@
             <!--  <i class="icon ion-pizza"></i> --> Cardápio
            </ion-item>
 
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
-  <ion-side-menu side="right" class="ion-side-menu" >
-    <ion-content has-bouncing="false">
-      <ion-list>
-      
-        <ion-item
-          ng-repeat="cat in cats"
-          class="item-checkbox item-cat">
-          <label class="checkbox">
-             <input type="checkbox"
-              ng-model="filterCattest[cat.CATP_Nome]"
-              ng-change="filteration(cat.CATP_CodigoCategoria)">
-          </label>
-          <span ng-bind="cat.CATP_Nome"></span>
-        </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>

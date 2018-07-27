@@ -58,15 +58,11 @@
 
 
   <plugin name="cordova-plugin-network-information"/>
-  <plugin name="cordova-plugin-email"/>
-  <plugin name="cordova-plugin-camera"/>
-  <plugin name="cordova-plugin-barcodescanner" version="0.7.1"/>
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-inappbrowser"/>
   <plugin name="cordova-plugin-splashscreen"/>
   <plugin name="cordova-plugin-whitelist"/>
   <plugin name="ionic-plugin-keyboard"/>
-  <plugin name="onesignal-cordova-plugin"  source="npm" />
 
 
   <config-file mode="merge" parent="/*" target="AndroidManifest.xml">
