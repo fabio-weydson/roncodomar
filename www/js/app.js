@@ -28,9 +28,9 @@ app.value('_', window._)
         }
     });
     $rootScope.$on('showloader', function () {
-      $ionicLoading.show({
-        template: 'Carregando...'
-      });
+     /*  $ionicLoading.show({
+        template: 'Carregando'
+      }); */
     });
     $rootScope.$on('hideloader', function () {
       $ionicLoading.hide();
