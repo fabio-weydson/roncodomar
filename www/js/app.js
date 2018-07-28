@@ -19,20 +19,6 @@ app.value('_', window._)
         StatusBar.styleDefault();
       }
 
-  var notificationOpenedCallback = function(jsonData) {
-    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal
-    .startInit("bd5c8c99-d161-45be-b48a-a62ff4ffb408")
-    .handleNotificationOpened(notificationOpenedCallback)
-    .endInit();
-      // google analytic integration
-      if(typeof analytics !== 'undefined') {
-          window.analytics.startTrackerWithId('UA-XXXXX-1');
-        } else {
-          console.log('Google Analytics Unavailable');
-      }
     
 
     });
@@ -124,18 +110,9 @@ app.value('_', window._)
       })
     
         // if none of the above states are matched, use this as the fallback
-    var appFirstRun = localStorage.getItem('appFirstRun');
 
-    var estabelecimento = localStorage.getItem('estabelecimento');
-
-    if(appFirstRun === 'true'){
-      // redirect if user present
-        $urlRouterProvider.otherwise('/app/adduser');
-      
-    }
-    else {
-      $urlRouterProvider.otherwise('/app/adduser');
-    }
+    $urlRouterProvider.otherwise('/app/adduser');
+    
   })
 
   .config(function ($cordovaAppRateProvider) {

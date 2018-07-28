@@ -11,10 +11,6 @@ function(
 	$state
 	){
 	$timeout(function() {
-		//
-    if(typeof analytics !== 'undefined') {
-			window.analytics.trackView('homeCtrl');
-		}
       $state.go('app.addUser');
     }, 3000);
 }]);
