@@ -1,8 +1,8 @@
 /*global app */
 'use strict';
 app
-.controller('cardapioCtrl', ['$scope', '$stateParams', 'dataservice', 'appConfig', '$ionicLoading',
-  function($scope, $stateParams, dataservice, appConfig , $ionicLoading){
+.controller('cardapioCtrl', ['$scope', '$stateParams', 'appConfig', '$ionicLoading',
+  function($scope, $stateParams, appConfig , $ionicLoading){
       $scope.visivel = 1;
       $scope.exibe = function(param){
         $scope.visivel = param;

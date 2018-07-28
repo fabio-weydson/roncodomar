@@ -5,27 +5,41 @@ var app = angular.module('restaurant',
 
 app.value('_', window._)
 
-  app.run(function($ionicPlatform, $rootScope, $ionicLoading, settings, dataservice, $state,$ionicPopup) {
+  app.run(function($ionicPlatform, $rootScope, $ionicLoading, $state) {
     $ionicPlatform.ready(function() {
        navigator.splashscreen.hide();
       if (window.cordova && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         cordova.plugins.Keyboard.disableScroll(true);
       }
-
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
       }
+    });
 
-    
 
+    // loader event
+    $rootScope.$on('$stateChangeStart',
+      function(event, toState ){
+        $rootScope.$broadcast('showloader');
+        if (toState.name==='app.thankyou') {
+          $ionicLoading.hide();
+        }
+    });
+    $rootScope.$on('showloader', function () {
+      $ionicLoading.show({
+        template: 'Carregando...'
+      });
+    });
+    $rootScope.$on('hideloader', function () {
+      $ionicLoading.hide();
     });
 
 
     // Disable BACK button on home
     $ionicPlatform.registerBackButtonAction(function(event) {
-      if($state.current.name == "app.addUser") { // your check here
+      if($state.current.name == "app.userPage") { // your check here
         $ionicPopup.confirm({
           title: 'Sair?',
           template: 'Deseja realmente sair?'

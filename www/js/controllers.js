@@ -7,7 +7,6 @@ app
 	'$timeout',
 	'$ionicTabsDelegate',
 	'$cordovaAppRate',
-	'dataservice',
 	'$rootScope',
 	'appConfig',
  function(
@@ -16,7 +15,6 @@ app
  	$timeout, 
  	$ionicTabsDelegate, 
  	$cordovaAppRate, 
- 	dataservice, 
  	$rootScope, 
  	appConfig
  	) {
