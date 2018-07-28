@@ -2,8 +2,7 @@
 angular.module('templates', []);
 var app = angular.module('restaurant',
   ['ionic', 'underscore', 'templates', 'angularMoment', 'angular.filter', 'ionic-datepicker', 'ionic-timepicker', 'ngAnimate', 'ngCordova', 'angular-cache']);
-app.value('convert', window.convert)
-app.value('geolib', window.geolib)
+
 app.value('_', window._)
 
   app.run(function($ionicPlatform, $rootScope, $ionicLoading, settings, dataservice, $state,$ionicPopup) {
@@ -24,28 +23,9 @@ app.value('_', window._)
     });
 
 
-    // loader event
-    $rootScope.$on('$stateChangeStart',
-      function(event, toState ){
-
-        $rootScope.$broadcast('showloader');
-        if (toState.name==='app.thankyou') {
-          $ionicLoading.hide();
-        }
-    });
-    $rootScope.$on('showloader', function () {
-      $ionicLoading.show({
-        template: 'Carregando...'
-      });
-    });
-    $rootScope.$on('hideloader', function () {
-      $ionicLoading.hide();
-    });
-
-
     // Disable BACK button on home
     $ionicPlatform.registerBackButtonAction(function(event) {
-      if($state.current.name == "app.userPage") { // your check here
+      if($state.current.name == "app.addUser") { // your check here
         $ionicPopup.confirm({
           title: 'Sair?',
           template: 'Deseja realmente sair?'
@@ -71,15 +51,6 @@ app.value('_', window._)
         abstract: true,
         templateUrl : 'templates/menu.html',
         controller: 'AppCtrl'
-      })
-      .state('app.home', {
-        url: '/home',
-        views: {
-          'menuContent': {
-            templateUrl : 'templates/home.html',
-            controller:'homeCtrl'
-          }
-        }
       })
       .state('app.addUser', {
         url: '/adduser',
@@ -114,19 +85,7 @@ app.value('_', window._)
     $urlRouterProvider.otherwise('/app/adduser');
     
   })
-
-  .config(function ($cordovaAppRateProvider) {
-    // configration for app rate
-    document.addEventListener('deviceready', function () {
-
-    }, false);
-  })
-
 var underscore = angular.module('underscore', []);
 underscore.factory('_', ['$window', function($window) {
   return $window._; // assumes underscore has already been loaded on the page
 }]);
-
-  //  .config(function (CacheFactoryProvider) {
-  //   angular.extend(CacheFactoryProvider.defaults, { maxAge: 24 * 60 * 60 * 1000,  storageMode: 'localStorage'  });
-  // })
